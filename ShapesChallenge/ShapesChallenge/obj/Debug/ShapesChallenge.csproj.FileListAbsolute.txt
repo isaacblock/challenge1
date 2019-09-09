@@ -5,3 +5,10 @@ C:\Users\102561305\Documents\GitHub\challenge1\ShapesChallenge\ShapesChallenge\o
 C:\Users\102561305\Documents\GitHub\challenge1\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.csproj.CoreCompileInputs.cache
 C:\Users\102561305\Documents\GitHub\challenge1\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.exe
 C:\Users\102561305\Documents\GitHub\challenge1\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.pdb
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\bin\Debug\ShapesChallenge.exe.config
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\bin\Debug\ShapesChallenge.exe
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\bin\Debug\ShapesChallenge.pdb
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.csprojAssemblyReference.cache
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.csproj.CoreCompileInputs.cache
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.exe
+C:\Users\102561305\Documents\GitHub\challenge1 - Proper\ShapesChallenge\ShapesChallenge\obj\Debug\ShapesChallenge.pdb

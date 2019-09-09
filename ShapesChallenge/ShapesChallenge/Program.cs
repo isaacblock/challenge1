@@ -6,71 +6,111 @@ using System.Threading.Tasks;
 
 namespace ShapesChallenge
 {
+
     class Program
     {
+        
         static void Main(string[] args)
         {
-            int Side1Length = 0;
-            int Side2Length = 0;
-            int Side3Length = 0;
-            int Side4Length = 0;
             bool selecta = false;
             bool selectb = false;
+            bool selectc = false;
+            bool squarepick = false;
+            bool rectanglepick = false;
+            
 
-            Console.WriteLine("Enter the first measurement");
-            Side1Length = Int32.Parse(Console.ReadLine());
-            Side3Length = Side1Length;
-
-            Console.WriteLine("Enter the second measurement");
-            Side2Length = Int32.Parse(Console.ReadLine());
-            Side4Length = Side2Length;
-
-
+            Console.WriteLine("Would you like to enter the measurements for a Square (S) or a Rectangle (R)");
+            string ans = Console.ReadLine();
 
             while (selecta == false)
             {
 
+                if (ans.ToUpper() == "S")
+                {
+                    squarepick = true;
+                    selecta = true;
+                }
+
+                else if (ans.ToUpper() == "R")
+                {
+                    rectanglepick = true;
+                    selecta = true;
+
+                }
+
+                else
+                {
+                    Console.WriteLine("Re-enter your decision");
+                }
+
+            }
+
+            while (selectb == false)
+            {
+                if (squarepick == true)
+                {
+
+                    Console.WriteLine("Enter the first measurement");
+                    Side1Length = Int32.Parse(Console.ReadLine());
+                    Side3Length = Side1Length;
+
+                    Console.WriteLine("Enter the second measurement");
+                    Side2Length = Int32.Parse(Console.ReadLine());
+                    Side4Length = Side2Length;
+
+                    selectb = false;
+                }
+
+                else if (rectanglepick == true)
+                {
+                    Console.WriteLine("Enter the first measurement");
+                    Side1Length = Int32.Parse(Console.ReadLine());
+                    Side3Length = Side1Length;
+
+                    Console.WriteLine("Enter the second measurement");
+                    Side2Length = Int32.Parse(Console.ReadLine());
+                    Side4Length = Side2Length;
+
+                    selectb = false;
+
+                }
+
+
+
+            }
+
+            while (selectc == false)
+            {
                 Console.WriteLine("Would you like to calculate the (P) Perimeter of the shape or the (A) Area of the shape?");
-                string ans = Console.ReadLine();
+                ans = Console.ReadLine();
 
-                if (ans == "P")
+                if (ans.ToUpper() == "P")
                 {
-                    Quad();
-                    selecta = true;
+                    if (squarepick == true)
+                    {
+                        ();
+
+
+                    }
+
+                    else if (rectanglepick == true)
+                    {
+
+                    }
+
                 }
 
-                else if (ans == "A")
+                else if (ans.ToUpper() == "A")
                 {
-                    selectb = true;
-                    selecta = true;
+                    if (squarepick == true)
+                    {
 
+                    }
 
-                }
+                    else if (rectanglepick == true)
+                    {
 
-                else
-                {
-                    Console.WriteLine("Re-enter your decision");
-                }
-            }
-
-            if (selectb == true)
-            {
-                Console.WriteLine("Is the shape a (S) Square or a (R) Rectangle?");
-                string ans = Console.ReadLine();
-
-                if (ans == "S")
-                {
-                    Square();
-                    Console.ReadKey(true);
-                    Environment.Exit(0);
-                }
-
-                else if (ans == "R")
-                {
-                    Rectangle();
-                    Console.ReadKey(true);
-                    Environment.Exit(0);
-
+                    }
                 }
 
                 else
@@ -79,29 +119,6 @@ namespace ShapesChallenge
                 }
 
 
-            }
-
-            int Quad()
-            {
-                int perimeter = Side1Length + Side2Length + Side3Length + Side4Length;
-                Console.WriteLine("The perimeter of the shape is " + perimeter);
-                return perimeter;
-
-            }
-
-            int Square()
-            {
-                int squarearea = Side1Length * Side1Length;
-                Console.WriteLine("The area of the square is " + squarearea);
-                return squarearea;
-
-            }
-
-            int Rectangle()
-            {
-                int rectarea = Side1Length * Side2Length;
-                Console.WriteLine("The area of the rectangle is " + rectarea);
-                return rectarea;
             }
 
             Console.ReadKey(true);
