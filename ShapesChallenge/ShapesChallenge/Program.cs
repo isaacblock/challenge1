@@ -13,6 +13,7 @@ namespace ShapesChallenge
         static void Main(string[] args)
         {
             string ans = "";
+            string colorselect = "null";
             bool selecta = false;
             bool selectb = false;
             bool selectc = false;
@@ -54,10 +55,14 @@ namespace ShapesChallenge
             {
                 if (squarepick == true)
                 {
-                    new Shapes.Quadrilateral.Square(valuea, valueb, valueb, valuea);
+                    new Shapes.Quadrilateral.Square(valuea, valueb, valueb, valuea, colorselect);
 
 
                     Console.WriteLine("Ok, Square it is.");
+
+                    Console.WriteLine("What colour is it?");
+                    colorselect = Console.ReadLine();
+
                     Console.WriteLine("Enter the first measurement");
                     valuea = Int32.Parse(Console.ReadLine());
 
@@ -69,9 +74,13 @@ namespace ShapesChallenge
 
                 else if (rectanglepick == true)
                 {
-                    new Shapes.Quadrilateral.Rectangle(valuea, valueb, valueb, valuea);
+                    new Shapes.Quadrilateral.Rectangle(valuea, valueb, valueb, valuea, colorselect);
 
                     Console.WriteLine("Ok, Rectangle it is.");
+
+                    Console.WriteLine("What colour is it?");
+                    colorselect = Console.ReadLine();
+
                     Console.WriteLine("Enter the first measurement");
                     valuea = Int32.Parse(Console.ReadLine());
 
@@ -96,7 +105,7 @@ namespace ShapesChallenge
                     if (squarepick == true)
                     {
                         int perimeter = valuea + valueb + valuea + valueb;
-                        Console.WriteLine("The Perimeter of the Square is " + perimeter);
+                        Console.WriteLine("The Perimeter of the " + colorselect + " Square is " + perimeter);
                         selectc = true;
 
                     }
@@ -104,7 +113,7 @@ namespace ShapesChallenge
                     else if (rectanglepick == true)
                     {
                         int perimeter = valuea + valueb + valuea + valueb;
-                        Console.WriteLine("The Perimeter of the Rectangle is " + perimeter);
+                        Console.WriteLine("The Perimeter of the " + colorselect + " Rectangle is " + perimeter);
                         selectc = true;
 
 
@@ -118,7 +127,7 @@ namespace ShapesChallenge
                     if (squarepick == true)
                     {
                         int squarearea = valuea * valuea;
-                        Console.WriteLine("The Area of the Square is " + squarearea);
+                        Console.WriteLine("The Area of the " + colorselect + " Square is " + squarearea);
                         selectc = true;
 
 
@@ -127,7 +136,7 @@ namespace ShapesChallenge
                     else if (rectanglepick == true)
                     {
                         int rectarea = valuea * valueb;
-                        Console.WriteLine("The Area of the Rectangle is " + rectarea);
+                        Console.WriteLine("The Area of the " + colorselect + " Rectangle is " + rectarea);
                         selectc = true;
 
                     }
@@ -145,6 +154,10 @@ namespace ShapesChallenge
             Environment.Exit(0);
 
 
+
         }
+
+
     }
+
 }
