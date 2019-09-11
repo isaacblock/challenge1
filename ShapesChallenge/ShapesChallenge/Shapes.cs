@@ -15,30 +15,38 @@ namespace Shapes
         public int Side4Length = 0;
         public string color = "null";
 
-        public int QuadPerimeter()
+        public Quadrilateral(int side1Length, int side2Length, int side3Length, int side4Length)
         {
-            int perimeter = Side1Length + Side2Length + Side3Length + Side4Length;
-            return perimeter;
+            Side1Length = side1Length;
+            Side2Length = side2Length;
+            Side3Length = side3Length;
+            Side4Length = side4Length;
 
         }
 
+
         public class Square : Quadrilateral
         {
-            public int SquareArea()
+            public Square(int side1Length, int side2Length, int side3Length, int side4Length) : base(side1Length, side2Length, side3Length, side4Length)
             {
-                int squarearea = Side1Length * Side1Length;
-                return squarearea;
+                Side1Length = side1Length;
+                Side2Length = side2Length;
+                Side3Length = side3Length;
+                Side4Length = side4Length;
+                
 
             }
-
         }
 
         public class Rectangle : Quadrilateral
         {
-            public int RectangleArea()
+            public Rectangle(int side1Length, int side2Length, int side3Length, int side4Length) : base(side1Length, side2Length, side3Length, side4Length)
             {
-                int rectarea = Side1Length * Side2Length;
-                return rectarea;
+                Side1Length = side1Length;
+                Side2Length = side2Length;
+                Side3Length = side3Length;
+                Side4Length = side4Length;
+
             }
 
 
