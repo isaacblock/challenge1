@@ -43,7 +43,7 @@ namespace ShapesChallenge
 
                 if (selecta == false)
                 {
-                Console.WriteLine("Re-enter your decision");
+                    Console.WriteLine("Re-enter your decision");
 
                 }
 
@@ -57,37 +57,88 @@ namespace ShapesChallenge
                 {
                     new Shapes.Quadrilateral.Square(valuea, valueb, valueb, valuea, colorselect);
 
-
-                    Console.WriteLine("Ok, Square it is.");
-
-                    Console.WriteLine("What colour is it?");
+                    Console.WriteLine("What colour is your Square?");
                     colorselect = Console.ReadLine();
 
-                    Console.WriteLine("Enter the first measurement");
-                    valuea = Int32.Parse(Console.ReadLine());
+                    try
+                    {
+                        Console.WriteLine("Enter the first measurement");
+                        valuea = Int32.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Enter the second measurement");
-                    valueb = Int32.Parse(Console.ReadLine());
+                        if (valuea < 1)
+                        {
+                            throw new LessThanOneException();
+                        }
 
-                    selectb = true;
+                        Console.WriteLine("Enter the second measurement");
+                        valueb = Int32.Parse(Console.ReadLine());
+
+
+                        if (valueb < 1)
+                        {
+                            throw new LessThanOneException();
+                        }
+
+                        selectb = true;
+
+                    }
+
+                    catch (System.FormatException)
+                    {
+                        Console.WriteLine("You must enter a complete number as a measurement.");
+
+                    }
+
+                    catch (LessThanOneException)
+                    {
+                        Console.WriteLine("You must not enter a number less than one.");
+
+                    }
+
                 }
 
                 else if (rectanglepick == true)
                 {
                     new Shapes.Quadrilateral.Rectangle(valuea, valueb, valueb, valuea, colorselect);
 
-                    Console.WriteLine("Ok, Rectangle it is.");
 
-                    Console.WriteLine("What colour is it?");
+                    Console.WriteLine("What colour is your Rectangle?");
                     colorselect = Console.ReadLine();
+                    try
+                    {
 
-                    Console.WriteLine("Enter the first measurement");
-                    valuea = Int32.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the first measurement");
+                        valuea = Int32.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Enter the second measurement");
-                    valueb = Int32.Parse(Console.ReadLine());
+                        if (valuea < 1)
+                        {
+                            throw new LessThanOneException();
+                        }
 
-                    selectb = true;
+                        Console.WriteLine("Enter the second measurement");
+                        valueb = Int32.Parse(Console.ReadLine());
+
+                        if (valueb < 1)
+                        {
+                            throw new LessThanOneException();
+                        }
+
+
+                        selectb = true;
+
+                    }
+
+                    catch (System.FormatException)
+                    {
+                        Console.WriteLine("You must enter a complete number as a measurement.");
+                    }
+
+                    catch (LessThanOneException)
+                    {
+                        Console.WriteLine("You must not enter a number less than one.");
+
+                    }
+
 
                 }
 
@@ -154,9 +205,7 @@ namespace ShapesChallenge
             Environment.Exit(0);
 
 
-
         }
-
 
     }
 
